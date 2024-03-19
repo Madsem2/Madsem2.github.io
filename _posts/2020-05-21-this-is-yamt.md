@@ -6,7 +6,10 @@ image: /assets/img/logo.jpg
 description: "Welcome to YAMT - Yet Another Minimal Theme."
 ---
 
-Welcome to YAMT - Yet Another Minimal Theme. YAMT is a minimal Jekyll theme focused on simplicity and ease-of-use. It has great modularity, allowing you to easily decide what you actually want on your website.
+
+Hrello World! My name is Mads Emil and this is my page, made in the course Social data and Visualisation. follow along while i explore the world of data visualisation.  
+
+
 
 * hello
 {:toc}
