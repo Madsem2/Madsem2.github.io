@@ -1,57 +1,48 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
 # Site settings
-title: YAMT
-description: "Yet Another Minimal Theme"
-url:  "https://pandasekh.github.io/Jekyll-YAMT/" # Actual base url of the website
-baseurl: "/"           # url of the jekyll blog. e.g. if you set url to "mysite.com" and baseurl to "blog", the jekyll website will work on "mysite.com/blog"
-author:
-  name: "Alessio Franceschi"
-  email: "alessiofranceschi2@gmail.com"
-  url: "https://alessiofranceschi.me"
-permalink: /:year/:month/:day/:title:output_ext
+title:       Type
+email:       ''
+description: ''
+baseurl:     '' # The subpath of your site, e.g. /blog
+url:         'https://type-jekyll.aspirethemes.com/' # The base hostname & protocol for your site
+twitter:     ''
+github:      ''
+instagram:   ''
+facebook:    ''
 
-#Plugins
-plugins: [jekyll-paginate, jekyll-feed, jekyll-seo-tag, jekyll-sitemap]
+markdown:  kramdown
+permalink: pretty
+paginate:  10
 
-#Pagination
-paginate: 3
-paginate_path: "/page:num/"
-
-#SEO
-twitter:
-  username: pandasekh
-  card: summary
-facebook:
-  app_id: # Facebook app ID for Facebook insights
-  publisher: # Facebook page URL or ID of the publishing entity
-  admins: # Facebook user ID for domain insights linked to a personal account
-logo: /assets/img/logo.jpg
-social:
-  links: #List your social links here
-    - https://twitter.com/PandaSekh
-    - https://www.github.com/pandasekh
-    - https://www.linkedin.com/in/alessio-franceschi/
-webmaster_verifications:
-  google: 
-  bing: 
-  alexa: 
-  yandex: 
-  baidu: 
-lang: en_US
-
-#Highlighter
-kramdown:
-  input:          GFM
-  syntax_highlighter: rouge
-
-  syntax_highlighter_opts:
-    css_class: 'highlight'
-    span:
-      line_numbers: false
-    block:
-      line_numbers: false
-      start_line: 1
-
-#Sass
 sass:
   style: compressed
-  sourcemap: never
+
+plugins:
+  - jekyll-paginate
+  - jekyll/tagging
+
+include:
+  - _pages
+
+exclude:
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+
+# Tags
+tag_page_dir:         tag
+tag_page_layout:      tag_page
+tag_permalink_style:  pretty
+
+# Pages path
+defaults:
+  - scope:
+      path: '_pages'
+    values:
+      permalink: /:basename:output_ext

@@ -1,45 +1,39 @@
-<!doctype html>
-<html>
-  <head>
-    {% include head.html %}
-  </head>
+---
+layout: default
+---
 
-<body>
+{% include base_path %}
 
-  <div class="container">
-    {% include header.html %}
+{% if page.image %}
+  <meta itemprop='og:image' content='{{ base_path }}{{ page.image }}'>
+{% endif %}
 
-    <div class="post-container">
-      <article id = "post">
-        <h2 id = "post-title">{{ page.title }}</h2>
+<div class='o-wrapper'>
+  <div class='o-grid'>
+    <div class='o-grid__col'>
+      <article class='c-post' itemscope itemtype='http://schema.org/BlogPosting'>
 
-  {% if site.data.settings.date-under-post.active %}
-  <div class = "post-info">
-    <span>
-        <i class="far fa-calendar" aria-hidden="true"></i> <span>{{ page.date | date_to_string }}</span> - <i class="far fa-clock"></i> {% include reading_time.html %}
-    </span>
-  </div>
-  {% endif %}
-        {{ content }}
+        <h1 class='c-post__title u-text-center'>{{ page.title }}</h1>
+
+        <time class='c-post__date' datetime='{{ page.date | date_to_xmlschema }}' itemprop='datePublished'>{{ page.date | date: '%d %b %Y' }}</time>
+
+        <div class='c-content' itemprop='articleBody'>
+          {% include page-image.html %}
+
+          {{ content }}
+        </div>
+
+        <div class='c-tags'>
+          {% for tag in page.tags %}
+            <a href='{{ site.baseurl }}/tag/{{ tag }}'>{{ tag }}</a>
+          {% endfor %}
+        </div>
+
+        <hr>
+
+        {% include disqus.html %}
+
       </article>
     </div>
-    {% if site.data.settings.categories.active %}
-      {% include categories.html %}
-    {% endif %}
-
-    {% if site.data.settings.related-posts.active %}
-      {% include related-posts.html %}
-    {% endif %}
-
-    {% if site.data.settings.comments %}
-      {% include comments.html %}
-    {% endif %}
   </div>
-
-{%- include footer.html -%}
-
-{% if site.data.settings.mathjax.active %}
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-{% endif %}
-</body>
-</html>
+</div>

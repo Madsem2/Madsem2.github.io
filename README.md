@@ -1,156 +1,212 @@
-# [YAMT - Yet Another Minimal Theme](https://yamt.netlify.app/)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/249c3da6-7b23-4b57-915d-71934329e306/deploy-status)](https://yamt.netlify.app/)
-![](https://badgen.net/rubygems/dt/jekyll-yamt)
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/PandaSekh/Jekyll-YAMT/issues)
-![GitHub forks](https://img.shields.io/github/forks/PandaSekh/Jekyll-YAMT?label=Fork%20it%21&style=social)
-## [Live Demo](https://yamt.netlify.app/)
+# Type: Minimal and Clean Free Jekyll Theme
 
-![Homepage](https://raw.githubusercontent.com/PandaSekh/Jekyll-YAMT/master/assets/img/screenshots/Screenshot.png?raw=true)
+<img alt="Type: Minimal and Clean Free Jekyll Theme" src="https://user-images.githubusercontent.com/626005/63093493-c3daa880-bf65-11e9-860e-da88047cce24.png">
 
-YAMT is a minimal [Jekyll](http://jekyllrb.com) theme focused on simplicity and ease-of-use. It has great modularity, allowing you to easily decide what you actually want on your website.
+- [Configurations](#configurations)
+- [Deployment](#deployment)
+- [Posts](#posts)
+- [Pages](#pages)
+- [Navigation](#navigation)
+- [Disqus Comments](#disqus-comments)
+- [Social Media Links](#social-media-links)
+- [Update favicon](#update-favicon)
 
-## Contents
+### Configurations
 
-- [Features](#features)
-- [Screenshots](#screenshots)
-- [Installation](#installation)
-- [Customize](#options)
-  - [Basics](#Basics)
-  - [Typography](#Typography)
-  - [Header](#header)
-  - [Home](#home)
-  - [Post](#post)
-  - [Contact Form](#contact-form)
-- [Development](#development)
-- [Credits](#credits)
-- [License](#license)
+Type theme comes with different customizations in the `_config.yml` file:
 
-## Features
+```sh
+title:       Type
+email:       ''
+description: ''
+baseurl:     '' # The subpath of your site, e.g. /blog
+url:         '' # The base hostname & protocol for your site
+twitter:     ''
+github:      ''
+instagram:   ''
+facebook:    ''
 
-- Minimal and clean design.
-- Fully modular: activate and load only what you really need.
-- Works great on mobile and smaller screens.
-- Works on Github Pages.
-- Supports [Disqus](https://disqus.com/) comments activated only on button press, if you activate them.
-- [Google Analytics](https://www.google.com/analytics/) support.
-- [Open Graph](https://ogp.me/) and [Twitter Cards](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started) support to better index the website content on search engines and social networks.
-- [MathJAX](https://www.mathjax.org/) and [LaTeX](https://www.latex-project.org/) optional support. Write beautiful math!
-- [RSS](https://github.com/jekyll/jekyll-feed) support.
-- Beautiful [Syntax Highlight](https://yamt.netlify.app/2020/05/19/special-formatting.html#syntax-highlight). Write some code and show it in a graceful way.
+markdown:  kramdown
+permalink: pretty
+paginate:  60
 
-## Screenshots
+sass:
+  style: compressed
 
-Mobile:  
-![Mobile](https://raw.githubusercontent.com/PandaSekh/Jekyll-YAMT/master/assets/img/screenshots/Screenshot_mobile.png?raw=true)
+gems:
+  - jekyll-paginate
+  - jekyll/tagging
 
-Code Highlight:  
-![Code](https://raw.githubusercontent.com/PandaSekh/Jekyll-YAMT/master/assets/img/screenshots/Screenshot_code_highlight.png)
+include:
+  - _pages
 
-Minimal:  
-![Minimal](https://raw.githubusercontent.com/PandaSekh/Jekyll-YAMT/master/assets/img/screenshots/Screenshot_minimal.png?raw=true)
+exclude:
+  - vendor
+  - Gemfile
+  - Gemfile.lock
 
-## Installation
+# Tags
+tag_page_dir:         tag
+tag_page_layout:      tag_page
+tag_permalink_style:  pretty
 
-There are four way to use YAMT: Netlify (suggested, as this theme has a contact module built-in working only on Netlify), Github Pages, as a gem-based theme, by forking this repo or by copying all the files into your directory.
+# Pages path
+defaults:
+  - scope:
+      path: '_pages'
+    values:
+      permalink: /:basename:output_ext
+```
 
-### Download the files
-You can [download the files](https://github.com/PandaSekh/Jekyll-YAMT/releases/latest) and add them in your directory to start working.
+### Deployment
 
-### Netlify
+To run the theme locally, navigate to the theme directory and run `bundle install` to install the dependencies, then run `jekyll serve` to start the Jekyll server.
 
-1. [Fork this repo](https://github.com/PandaSekh/Jekyll-YAMT/generate). You can copy only master, set it to private or public and name it however you want.
-2. Go to [Netlify](https://app.netlify.com/), create a New site from Git, choose your repo or all repos, no difference. Back to Netlify, select the recently forked repo.
-3. Owner and branch are good to go. In build command write `bundle exec jekyll build` and publishing directory should be `_site/`.
-4. Deploy. Your site will shortly be available. Under domain settings you can change your subdomain, or add a primary level one. 
+I would recommend checking the [Deployment Methods](https://jekyllrb.com/docs/deployment-methods/) page on Jekyll website.
 
-### Github Pages
+### Posts
 
-Github Pages uses the [--safe flag](https://jekyllrb.com/docs/configuration/options/) to build jekyll websites, which disable custom plugins, caching to disk and ignore symbolic links. Because of that, I suggest you to use any other method. Netlify works great with a 5 minute config, so I suggest you use it.
+To create a new post, you can create a new markdown file inside the `_posts` directory by following the [recommended file structure](https://jekyllrb.com/docs/posts/#creating-post-files).
 
-1. [Fork this repo](https://github.com/PandaSekh/Jekyll-YAMT/generate).
-2. Create a new branch in your repo and call it `gh-pages`.
-3. Publish your website and choose gh-pages as the target branch.
+The following is a post file with different configurations you can add as an example:
 
-### Remote theme
+```sh
+---
+layout: post
+title: Welcome to Jekyll!
+featured: true
+tags: [frontpage, jekyll, blog]
+image: '/images/welcome.jpg'
+---
+```
 
-[Follow these instructions](https://help.github.com/en/github/working-with-github-pages/adding-a-theme-to-your-github-pages-site-using-jekyll).
+You can set the author, featured or not, tags, and the post image.
 
-### Gem-based theme 
-1. Add this line to your Jekyll site's `Gemfile`:
+The `featured` key is to mark the post as a featured post, this will add a simple star icon (*) to the postcard.
 
-    ```ruby
-    gem "jekyll-yamt"
-    ```
+To keep things more organized, add post images to **/images/posts** directory, and add page images to **/images/pages** directory.
 
-2. And add this line to your Jekyll site's `_config.yml`:
+To create a draft post, create the post file under the **_drafts** directory, and you can find more information at [Working with Drafts](http://jekyllrb.com/docs/drafts/).
 
-    ```yaml
-    theme: jekyll-yamt
-    ```
+For tags, try to not add space between two words, for example, `Ruby on Rails`, could be something like (`ruby-on-rails`, `Ruby_on_Rails`, or `Ruby-on-Rails`).
 
-3. And then execute:
+Note that tags are not working with GitHub Pages, that's because the used [jekyll-tagging
+](https://github.com/pattex/jekyll-tagging) plugin is not [whitelisted](https://pages.github.com/versions/) by GitHub.
 
-    ``` bash
-    $ bundle
-    ```
+To make this work, I use [Netlify.com](https://www.netlify.com/) for deployment.
 
-4. Or install it yourself as:
-    
-    ``` bash
-    $ gem install jekyll-yamt
-    ```
+### Pages
 
-#### ERROR: There was an error while loading `jekyll-yamt.gemspec`: No such file or directory - git ls-files -z. Bundler cannot continue.
-If you encounter this error when running `bundle install`, please make sure git is installed.
+To create a new page, just create a new markdown file inside the `_pages` directory.
 
-## Customize
+The following is the `about.md` file that you can find as an example included in the theme with the configurations you can set.
 
-YAMT is easily customizable. If you don't need a functionality, just deactivate it in `_data/settings.yml`.
-Most of the customizable things are self-explanatory and found in the `_data` folder and in the `_config.yml`.
+```sh
+---
+layout: page
+title: About
+image: '/images/pages/about.jpeg'
+---
+```
 
-### Basics
+Things you can change are: `title` and `image` path.
 
-Under the `_data` folder there are three files: pages, settings and social.
-In pages you can add other pages that will show up in the nav-
-In social you can add your socials that will show up in the nav. To add a social, find a suitable icon on [FontAwesome](https://fontawesome.com/) and add it's name in the name tag.
-Brand defines Font Awesome's font type (fas is solid, fab is brand).
-Out of the box this theme has support colors for a bunch of social. If your social isn't supported, just add the color in the header.css 
 
-In `_data/settings.yml` you can activate or deactivate various functions of the theme, like analytics, disqus comments, related posts and so on.
+### Navigation
 
-### Typography
-By default YAMT uses the System Font STack, which greatly reduces load times. If you want to use the old Font Stack, in `assets/main.scss` change `typography` to `typography-old`.
+The navigation on the sidebar will automatically include all the links to the pages you have created.
 
-### Header
-In `_data/settings.yml` you can choose to hide or show the subtitle, the page navigation or the social icons.
+### Disqus Comments
 
-### Home
-In `_data/settings.yml` you can choose to hide or show the posts infos (date and read-time) and the featured image.
+Open `_includes/disqus.html` file, and change the `aspirethemes-demos` value on line `12` with your [Disqus account shortname](https://help.disqus.com/customer/portal/articles/466208).
 
-### Post
-In `_data/settings.yml` you can choose to hide or show the post infos, categories, related posts and comments.
-Note that by removing categories the Categories Archives will no longer be reachable.
+```js
+s.src = '//aspirethemes-demo.disqus.com/embed.js';
+```
 
-### Contact Form
-YAMT has a built-in contact form builded using [Netlify](https://app.netlify.com/) free form functionality. To make it work you only need the line `data-netlify="true"` when declaring a form.  
-If you don't want to use Netlify, remove the line `data-netlify="true"`.
+So, if your Disqus shortname is `exampleone`, the final code above should be
 
-## Development
+```js
+s.src = '//exampleone.disqus.com/embed.js';
+```
 
-[Contributions are welcomed and encouraged](https://github.com/PandaSekh/Jekyll-YAMT/issues).
+That's all you need to setup Disqus from the theme side. If you get any issue regarding that comments are unable to load. First, make sure you have [registered your website with Disqus (Step 1)](https://help.disqus.com/customer/portal/articles/466182-publisher-quick-start-guide)
 
-To set up your environment to develop this theme, run `bundle install`.
+And also check [Disqus troubleshooting guide](https://help.disqus.com/customer/portal/articles/472007-i-m-receiving-the-message-%22we-were-unable-to-load-disqus-%22) if you still have issues.
 
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
+### Social Media Links
 
-When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
-To add a custom directory to your theme-gem, please edit the regexp in `yamt.gemspec` accordingly.
+Social media links included in `_includes/footer.html` file.
 
-## Credits
-Theme designed and created by [Alessio Franceschi](https://github.com/PandaSekh/).
-Inspired by [Lagrange by LeNPaul](https://lenpaul.github.io/Lagrange/).  
-Also great help from [this blog](https://blog.webjeda.com/), I've used this even before I created this theme.  
-Images from [Unsplash](https://unsplash.com/).
+The theme is using [Evil Icons](http://evil-icons.io/), which contains very simple and clean icons. The following is a list of the social media icons to use:
 
-## License
-The theme is available as open source under the terms of the [MIT License](https://github.com/PandaSekh/Jekyll-YAMT/blob/master/LICENSE.txt).
+Twitter
+
+```html
+<span data-icon='ei-sc-twitter' data-size='s'></span>
+```
+
+Facebook
+
+```html
+<span data-icon='ei-sc-facebook' data-size='s'></span>
+```
+
+Instagram
+
+```html
+<span data-icon='ei-sc-instagram' data-size='s'></span>
+```
+
+Pinterest
+
+```html
+<span data-icon='ei-sc-pinterest' data-size='s'></span>
+```
+
+Vimeo
+
+```html
+<span data-icon='ei-sc-vimeo' data-size='s'></span>
+```
+
+Google Plus
+
+```html
+<span data-icon='ei-sc-google-plus' data-size='s'></span>
+```
+
+SoundCloud
+
+```html
+<span data-icon='ei-sc-soundcloud' data-size='s'></span>
+```
+
+Tumblr
+
+```html
+<span data-icon='ei-sc-tumblr' data-size='s'></span>
+```
+
+Youtube
+
+```html
+<span data-icon='ei-sc-youtube' data-size='s'></span>
+```
+
+### Update favicon
+
+You can find the current favicon (favicon.ico) inside the theme root directory, just replace it with your new favicon.
+
+
+### Aspire Themes
+
+👉 Visit [**aspirethemes.com**](http://bit.ly/type-jekyll-github-link) for more Jekyll, Ghost, and WordPress themes.
+
+<img alt="Aspire Themes" src="https://user-images.githubusercontent.com/626005/63092640-afe17780-bf62-11e9-9ea9-546489bb282c.png">
+
+---
+
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8G8PKPEADPD42&source=url">
+  <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif">
+</a>
