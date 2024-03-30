@@ -2,7 +2,7 @@
 layout: default
 ---
 
-![Banner](assets/biscuit.png)
+![Banner](assets/biscuit@2x.png)
 
 
 
