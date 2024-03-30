@@ -5,42 +5,42 @@ layout: default
 ![Banner](assets/biscuit.png)
 
 
-**[Biscuit](http://sblisesivdin.github.io/biscuit)** is a single-page responsive Jekyll theme. This is the most simple and still-good-looking Jekyll theme that you can find. 
 
-## Usage
+---
+# Feel free to add content and custom Front Matter to this file.
+layout: frontpage 
+#Use layout "home" if you want the posts showing
+title: Welcome
+permalink: /
 
-You can use this theme with [Jekyll](http://jekyllrb.com/) or you can simply use it with [Github Pages](https://pages.github.com).
-For local usage just download [Jekyll](http://jekyllrb.com/), use installation guide for more. You can download latest Biscuit from [its Github repository](https://github.com/sblisesivdin/biscuit).
+---
+## Introduction
+This is a webpage showcasing a short data-story based on the work done in the DTU 
+course: "02806 Social data analysis and visualization-Spring 24" class so far. (This exercise is a kind of "micro version" of what we'll be doing in the final project). Follow the directions in the bulleted list below when you create your data-story.
 
-If you prefer to use Github Pages, you do not need to download it, upload files to a new repository...etc., just [fork](https://docs.github.com/en/get-starter/quickstart/fork-a-repo) and use it.
 
-### Files
+## The dataset
+The dataset which has been worked with is called; "Police Department Incident Reports: Historical 2003 to May 2018" and provides insight into observations of various crimes committed in San Francisco from 2003-2018. 
+It consists of 2.13M observations which are categorized into 14 columns. These include e.g. a crime category (prostitution, car theft, robbery), the day and date of the crime, the time, the district and the coordinates of the crime.
 
-* `_config.yml`            : Main configuration file.
-* `index.md`               : Website page (for now, this page).
-* `_includes/head.html`    : File to add custom code to `<head>` section.
-* `_includes/scripts.html` : File to add custom code before `</body>`. You can change footer at here.
-* `_sass` folder           : Related scss files can be found at this folder.
-* `css/main.csss`          : Main scss file.
-* `README.md`              : A simple readme file.
+## Analysis
+In this section, we'll delve into the analysis of SF Crime Data and explore key insights.
+¨
+HER ER DER ET BILLEDE
 
-## Example tag usage
+![This is a calendar plot](https://linchang2.github.io/calendarplot.png)
 
-## Header 1
-### Header 2
-#### Header 3
-**bold**
-*italic*
+HER ER BOKEH
+<iframe src="bokeh_plot.html" width="800" height="400"></iframe>
 
-> blockquotes
 
-~~~python
-import os,time
-print ("Biscuit")
-~~~
-
-## Licence and Author Information
-
-Biscuit is derived from currently deprecated theme [Solo](http://github.com/chibicode/solo). The development of Biscuit is maintained by [Sefer Bora Lisesivdin](https://lrgresearch.org/bora).
-
-Biscuit and the previous code where Biscuit is derived are distributed with [MIT license](https://github.com/sblisesivdin/biscuit/blob/gh-pages/LICENSE).
+One time-series / bar chart (it's OK to use the "fancy" plot-typs like calendar plots or polar bar-charts from Week 2, Part 4).
+One map (use techniques from Week 3 and 4)
+One interactive visualization in Bokeh (Week 6)
+At a minimum, the Bokeh visualization should contain different data than the exercise we did for Week 6 (it's a plus if it's a new type of viz altogether).
+The two other visualization may be repetitions of figures created during the previous lectures, or they may be new.
+Make the figures nice. Specifically:
+Aim to make the figures visually consistent (color, fonts, etc)
+Follow the recommendations from my video on nice figures (Week 2, part 3)
+In terms of the amount of text, I envision something like 500-1500 words (including figure captions). Try to write in your own words - the LLMs have a tendency to write a lot of text and not be so precise. So if the writing is all elegantly written but empty prose, we will be critical. It is OK, however, to have the LLM help you get the grammer, etc. right.
+It is a plus if you can back up some of your findings with external sources, such as news stories from the area, looking up which building is located at some set of lat,lon coordinates, or similar. (So when you see something happening at some time/place in the data, see if you can understand it more deeply by investigating outside the dataset.) Use real references at the end of the text to organize your links to the outside world.
