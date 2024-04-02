@@ -21,7 +21,6 @@ It consists of 2.13M observations which are categorized into 14 columns. These i
 
 
 
-
 ## The analysis
 In this section, we'll delve into the analysis of SF Crime Data and explore key insights.
 The dataset contains observatinos of 37 different types of crimes but as a start we will only look at 14 different focuscrimes. We will also remove the year 2018 as only a fraction of the year is contained in the data.
@@ -29,6 +28,9 @@ The dataset contains observatinos of 37 different types of crimes but as a start
 
 ### Bokeh plot for focuscrimes from 2003-2017:
 To get an overview of the different types of crimes, a Bokeh plot have been made for each of the focuscrimes. As the plot is interactive it's easy to quickly compare the tendencies for each of the crimes. The Bokeh plot shows the development for each crime type in the years from 2003-2017. For better comparison and for all crime types to be interpretable, the data has been normalized:
+
+
+<iframe src="bokeh_plot.html" width="800" height="400"></iframe>
 
 The bokeh plot above is based on the one from week 6.
 Some of the more interesting aspects can be seen in 'Drug/narcotic' falling from 2009 to 2017, 'Vehicle Theft' suddently being reduced from 2005 to 2006, and prostetution falling from 2007 to 2017.
