@@ -44,6 +44,17 @@ For this analysis we have chosen to continue with 'Vehicle theft'.
 
 ![This is a bar plot](https://Madsem2.github.io/bar_plot.png)
 
+When we dive into the data and plot the "type of crime" in a cluster of bar plots, some new patterns are visible.  A lot of the crime counts in the first years come from recovered vehicles from (2003-2005). This data type (VEHICLE, RECOVERED, XXXXX...) has no record of more recovered vehicles in the period 2006-2017, this makes a clear shift of the data and distorts our initial interpretation of the overall data plot of "Vehicle theift". 
+Especially the drop form of crimes from 2005 to 2006. There is still a drop, but it is now way closer to the numbers found in East Bay Times [1]
+
+
+Other highlights
+- Raise in motorcycles
+- The "Stolen car attempts" data is still heavily impacted by initiatives in from East bay times [1]  
+
+
+
+
 
 
 
@@ -51,3 +62,5 @@ For this analysis we have chosen to continue with 'Vehicle theft'.
 ---
 ## References
 [1] East Bay Times. (2007, February 18). Auto thefts in state decline for first time in decade. Retrieved March 11, 2024, from https://www.eastbaytimes.com/2007/02/18/auto-thefts-in-state-decline-for-first-time-in-decade-2/
+
+[2]SpotAngels. (n.d.). SF Parking: Car Break-Ins & How to Prevent Them. Retrieved March 11, 2024, from https://www.spotangels.com/blog/sf-parking-car-break-ins/
