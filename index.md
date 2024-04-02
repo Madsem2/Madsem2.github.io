@@ -2,7 +2,7 @@
 layout: default
 ---
 
-![Banner](assets/cover2.png)
+![Banner](assets/cover3@2x.png)
 
 
 ---
