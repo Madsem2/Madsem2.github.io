@@ -48,7 +48,7 @@ When we dive into the data and plot the "type of crime" in a cluster of bar plot
 Other highlights from the bar chart:
 - A wave/rebound of the initiatives in stolen automotive (2010-2017)
 - Raise in stolen motorcycles (2011-2015) (maybe due to rescoping of the target) 
-- The "Stolen car attempts" data is still heavily impacted by initiatives from East Bay Times [1]  
+- The "ATTEMPED STOLEN VEHICLE" data is still heavily impacted by initiatives from East Bay Times [1]  
 
 ![This is a bar plot](https://Madsem2.github.io/bar_plot.png)
 Figure 2 - Bar plots of the various types of vehicle theft committed from 2003-2017
@@ -75,4 +75,4 @@ Heatmap: Lin Chang Brendstrup, s193982 <br>
 ## References
 [1] East Bay Times. (2007, February 18). Auto thefts in state decline for first time in decade. Retrieved March 11, 2024, from https://www.eastbaytimes.com/2007/02/18/auto-thefts-in-state-decline-for-first-time-in-decade-2/
 
-[2]SpotAngels. (n.d.). SF Parking: Car Break-Ins & How to Prevent Them. Retrieved March 11, 2024, from https://www.spotangels.com/blog/sf-parking-car-break-ins/
+[2] SpotAngels. (n.d.). SF Parking: Car Break-Ins & How to Prevent Them. Retrieved March 11, 2024, from https://www.spotangels.com/blog/sf-parking-car-break-ins/
