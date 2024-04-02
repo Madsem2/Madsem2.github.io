@@ -54,7 +54,15 @@ Other highlights
 
 
 
+## Contributions
 
+We have all been contributing to each of the plots as we have all made them thorugh the weekly assigments in the course, where we have been working collaboratively. 
+However, adjusting the plots to this specific analysis have been divided as detailed below:
+
+Introduction: Together
+Bokeh plot: Rasmus Kongsted, s193984
+Bar plots: Mads Emil Oxholm Iversen, s191229 
+Heatmap: Lin Chang Brendstrup, s193982
 
 
 
