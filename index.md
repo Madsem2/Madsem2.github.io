@@ -42,6 +42,12 @@ For this analysis we have chosen to continue with 'Vehicle theft'.
 
 
 
+![This is a bar plot](https://Madsem2.github.io/bar_plot.png)
+
+
+
+
+
 ---
 ## References
 [1] East Bay Times. (2007, February 18). Auto thefts in state decline for first time in decade. Retrieved March 11, 2024, from https://www.eastbaytimes.com/2007/02/18/auto-thefts-in-state-decline-for-first-time-in-decade-2/
