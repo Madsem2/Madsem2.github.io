@@ -25,7 +25,7 @@ It consists of 2.13M observations which are categorized into 14 columns. These i
 In this section, we'll delve into the analysis of SF Crime Data and explore key insights.
 The dataset contains observatinos of 37 different types of crimes but as a start we will only look at 14 different focuscrimes. We will also remove the year 2018 as only a fraction of the year is contained in the data.
 
-<iframe src="heatmap2.html" width="800" height="400"></iframe>
+<iframe src="vehicleHeatmap.html" width="800" height="400"></iframe>
 
 
 ### Bokeh plot for focuscrimes from 2003-2017:
