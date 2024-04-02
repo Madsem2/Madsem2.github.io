@@ -7,7 +7,7 @@ layout: default
 
 ---
 
-<p style="text-align: center;"># Assigment 2</p>
+# Assigment 2
 
 
 
@@ -69,6 +69,15 @@ Introduction: Together <br>
 Bokeh plot: Rasmus Kongsted, s193984 <br>
 Bar plots: Mads Emil Oxholm Iversen, s191229 <br>
 Heatmap: Lin Chang Brendstrup, s193982 <br>
+
+
+
+
+
+
+
+
+
 
 
 
