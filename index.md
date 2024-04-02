@@ -50,7 +50,7 @@ When we dive into the data and plot the "type of crime" in a cluster of bar plot
 Other highlights from the bar chart:
 - A wave/rebound of the initiatives in stolen automotive (2010-2017)
 - Raise in stolen motorcycles (2011-2015) - maybe due to rescoping of the target. From cars to motorcycles) 
-- The "ATTEPED STOLEN VEHICHE" data is still heavily impacted by initiatives decribed East Bay Times [1]  
+- The "ATTEMPED STOLEN VEHICHE" data is still heavily impacted by initiatives decribed East Bay Times [1]  
 
 ![This is a bar plot](https://Madsem2.github.io/bar_plot.png)
 Figure 2 - Bar plots of the various types of vehicle theft committed from 2003-2017
