@@ -44,7 +44,7 @@ For this analysis we have chosen to continue with 'Vehicle theft'.
 
 ![This is a bar plot](https://Madsem2.github.io/bar_plot.png)
 
-When we dive into the data and plot the "type of crime" in a cluster of bar plots, some new patterns are visible.  A lot of the crime counts in the first years come from recovered vehicles from (2003-2005). This data type (VEHICLE, RECOVERED, XXXXX...) has no record of more recovered vehicles in the period 2006-2017, this makes a clear shift of the data and distorts our initial interpretation of the overall data plot of "Vehicle theift". 
+When we dive into the data and plot the "type of crime" in a cluster of bar plots, some new patterns are visible.  A lot of the crime counts in the first years come from recovered vehicles from (2003-2005). These data types (VEHICLE, RECOVERED, XXXXX...) has no record of more recovered vehicles in the period 2006-2017, this makes a clear shift of the data and distorts our initial interpretation of the overall data plot of "Vehicle theift". 
 Especially the drop form of crimes from 2005 to 2006. There is still a drop, but it is now way closer to the numbers found in East Bay Times [1]
 
 
